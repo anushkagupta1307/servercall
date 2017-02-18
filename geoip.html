@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Calls</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-app="geoapp" ng-controller="geoctrl">
+    <select ng-model="format">
+       <option>Json</option>
+       <option>xml</option>
+        
+    </select>
+    <input type="text" ng-model="hostname" placeholder="Type host name here e.g.google.com" ng-change="searchhost()"> 
+     <h2>{{hostname}} &nbsp; I.P is {{result.ip}} Country {{result.country_name}} </h2>
+ {{result}}
+</body>
+</html>
